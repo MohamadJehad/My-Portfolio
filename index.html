@@ -20,6 +20,9 @@
                 </div>
                 <nav>
                     <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     <ul class="navlinks">
                         <li><a href="#">Home</a></li>
@@ -30,6 +33,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                
             </header>
             <div class="container">
                  <div class="hero-pic">
@@ -286,7 +290,7 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fa-brands fa-github"></i>
+                        <i clas@s="fa-brands fa-github"></i>
                         <div>
                             <h3>GitHub</h3>
                             <p><a href="https://github.com/MohamadJehad" target="_blank">github.com/MohamadJehad</a></p>
@@ -303,7 +307,34 @@
             </div>
         </div>
      </section>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+        document.addEventListener("click", function(e){
+            if (!e.target.closest('.togglebtn') && !e.target.closest('.navlinks')) {
+                togglebtn.classList.remove("click");
+                nav.classList.remove("open");
+            }
+        });
+
+        var typed=new Typed(".input",{
+            strings: ["Full-Stack Developer", "Computer Engineer", "ASP.NET Developer", "React Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
 
 </body>
+
+
 </html>
 
