@@ -579,13 +579,13 @@ section {
 .languages {
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .languages h3 {
     font-size: 1.3rem;
     margin-bottom: 20px;
     color: #007ced;
-    text-align: center;
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
